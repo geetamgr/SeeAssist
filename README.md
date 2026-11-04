@@ -274,6 +274,4 @@ I am particularly interested in contributing to teams where AI, accessibility, a
 
 ---
 
-### Screenshot and sample-output note
 
-The application screenshots in this repository are genuine captures of the SeeAssist interface. Any example descriptions or conversations added to showcase graphics are illustrative samples, not representations of newly recorded live API responses.
