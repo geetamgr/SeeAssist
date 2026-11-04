@@ -383,7 +383,7 @@ SeeAssist also includes English and Nepali interface options.
 
 **GitHub:** https://github.com/geetamgr/SeeAssist
 
-**Demo Video:** Add the public or unlisted YouTube demonstration link here.
+**Demo Video:** [Add the public or unlisted YouTube demonstration link here.](https://youtu.be/n_LVGtpiHNs)
 
 The demonstration shows the SeeAssist prototype operating on an iPhone.
 
