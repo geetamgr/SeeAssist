@@ -267,6 +267,126 @@ I am particularly interested in contributing to teams where AI, accessibility, a
 
 ---
 
+## 📱 Running SeeAssist on an iPhone (For Hackathon Judges)
+
+SeeAssist is an AI-powered accessibility prototype built with React Native, Expo, and a Node.js backend.
+
+The application was developed and tested on a physical iPhone using Expo Go.
+
+### Prerequisites
+
+- A computer with Node.js and npm installed
+- An iPhone with a compatible version of Expo Go
+- A shared Wi-Fi network for the computer and iPhone
+- Access to the required Meta Muse API credentials
+- Git installed
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/geetamgr/SeeAssist.git
+cd SeeAssist
+npm install
+```
+
+### 2. Configure the backend
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the `backend` directory and configure the required Meta API credentials according to the backend configuration.
+
+**Security:** Never commit `.env` files or API keys to GitHub.
+
+### 3. Start the backend
+
+From the `backend` directory:
+
+```bash
+node server.js
+```
+
+The backend runs locally on port `3001`.
+
+### 4. Find your computer's IPv4 address
+
+On Windows, open PowerShell and run:
+
+```powershell
+ipconfig
+```
+
+Find the IPv4 address for your active Wi-Fi adapter.
+
+For example:
+
+```text
+192.168.1.10
+```
+
+This is an example address, not a public server.
+
+### 5. Configure the frontend API URL
+
+In the following files:
+
+- `src/app/camera.tsx`
+- `src/app/read-text.tsx`
+- `src/app/voice-question.tsx`
+
+Locate the `API_BASE_URL` constant and replace the development IP address with your computer's IPv4 address.
+
+Example:
+
+```typescript
+const API_BASE_URL = 'http://192.168.1.10:3001';
+```
+
+Save the changes.
+
+### 6. Start Expo
+
+Return to the project root:
+
+```bash
+npx expo start --lan
+```
+
+Scan the QR code using your iPhone to open the project in Expo Go.
+
+Keep the backend and Expo development server running while testing.
+
+### 7. Explore SeeAssist
+
+The application provides three main features:
+
+**Describe Surroundings:** Capture an image, generate an AI description using Meta Muse Spark, and listen to the result.
+
+**Read Text:** Capture printed information, extract text using Tesseract OCR, and listen to the extracted content.
+
+**Ask a Question:** Record a spoken question, transcribe it using Meta Muse Voice Transcribe, and generate an answer using Meta Muse Spark.
+
+SeeAssist also includes English and Nepali interface options.
+
+### Important Testing Notes
+
+- The frontend and backend must be reachable on the same network.
+- Local IP addresses such as `192.168.x.x` are not accessible over the public internet.
+- Meta-powered features require valid API credentials and may incur usage charges.
+- Expo Go is used for development testing; this repository does not include a standalone iOS installation package.
+- Some language-dependent speech capabilities depend on the voices available on the iPhone.
+- SeeAssist is an experimental prototype and should not be relied upon for safety-critical navigation or decisions.
+
+### Demo and Source Code
+
+**GitHub:** https://github.com/geetamgr/SeeAssist
+
+**Demo Video:** Add the public or unlisted YouTube demonstration link here.
+
+The demonstration shows the SeeAssist prototype operating on an iPhone.
+
 <p align="center">
   <strong>SeeAssist — See beyond barriers.</strong><br/>
   <em>Built with curiosity. Driven by inclusion. Powered by AI.</em>
